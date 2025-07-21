@@ -73,7 +73,7 @@ class Example{
       double discount = total/100*10;
       double price = total-discount;
       
-      System.out.println("+---------------------------------------------------------------+");
+System.out.println("+---------------------------------------------------------------+");
 System.out.println("|               _   __  __          _____ _______               |");
 System.out.println("|              ( ) |  \\/  |   /\\   |  __ \\__   __|              |");
 System.out.println("|               _  | \\  / |  /  \\  | |__) | | |                 |");
@@ -104,11 +104,14 @@ System.out.printf("| %-28s | %-12s| %15.2f |%n", "","Discount(10%)", discount);
 System.out.println("|                              +--------------+-----------------+");
 System.out.printf("| %-28s | %-12s | %15.2f |%n", "","Price", price);
 System.out.println("+------------------------------+--------------+-----------------+");
-
+System.out.println();
 System.out.print("Enter Amount -");
 double cash = input.nextDouble();
 
-double change = cash-price;
+double price2 = cash-price;
+int change =(int)price2;
+
+System.out.println();
 
 System.out.println("+-------------------------------------+");
 System.out.printf("|     %-19s | %-9s |%n","Net Amount",price);
@@ -117,9 +120,9 @@ System.out.printf("|     %-19s | %-9s |%n","Cash",cash);
 System.out.println("+-------------------------------------+");
 System.out.printf("|     %-19s | %-9s |%n","Change",change);
 System.out.println("+-------------------------------------+");
-
+System.out.println();
 String rs = "Rs.";
-double note1,note2,note3,note4,note5,note6,note7,coin1,coin2,coin3,coin4;
+int note1,note2,note3,note4,note5,note6,note7,coin1,coin2,coin3,coin4;
 note1 = 5000;
 note2 = 2000;
 note3 = 1000;
@@ -132,35 +135,76 @@ coin2 = 5;
 coin3 = 2;
 coin4 = 1;
 
+int no = 0;
+
+int i = change/note1;
+int change2 = change%note1;
+
+int i2 = change2/note2;
+int change3 = change2%note2;
+
+int i3 = change3/note3;
+int change4 = change3%note3;
+
+int i4 = change4/note4;
+int change5 = change4%note4;
+
+int i5 = change5/note5;
+int change6 = change5%note5;
+
+int i6 = change6/note6;
+int change7 = change6%note6;
+
+int i7 = change7/note7;
+int change8 = change7%note7;
+
+int i8 = change8/coin1;
+int change9 = change8%coin1;
+
+int i9 = change9/coin2;
+int change10 = change9%coin2;
+
+int i10 = change10/coin3;
+int change11 = change10%coin3;
+
+int i11 = change11/coin4;
+int change12 = change11%coin4;
+
+int totalNotes = i+i2+i3+i4+i5+i6+i7;
+int totalCoins = i8+i9+i10+i11;
 
 System.out.println("+-------------------------------------+");
 System.out.printf("|     %-19s | %-9s |%n","Value","no");
 System.out.println("+-------------------------------------+");
-System.out.printf("| %-29%-28s | %-12s |%n",rs,"note1","");
+System.out.printf("|   %s%-18d | %-9d |%n",rs,note1,i);
 System.out.println("+-------------------------------------+");
-System.out.printf("| %-29%-28s | %-12s |%n",rs,"note1","");
+System.out.printf("|   %s%-18d | %-9d |%n",rs,note2,i2);
 System.out.println("+-------------------------------------+");
-System.out.printf("| %-29%-28s | %-12s |%n",rs,"note1","");
+System.out.printf("|   %s%-18d | %-9d |%n",rs,note3,i3);
 System.out.println("+-------------------------------------+");
-System.out.printf("| %-29%-28s | %-12s |%n",rs,"note1","");
+System.out.printf("|   %s%-18d | %-9d |%n",rs,note4,i4);
 System.out.println("+-------------------------------------+");
-System.out.printf("| %-29%-28s | %-12s |%n",rs,"note1","");
+System.out.printf("|   %s%-18d | %-9d |%n",rs,note5,i5);
 System.out.println("+-------------------------------------+");
-System.out.printf("| %-29%-28s | %-12s |%n",rs,"note1","");
+System.out.printf("|   %s%-18d | %-9d |%n",rs,note6,i6);
 System.out.println("+-------------------------------------+");
-System.out.printf("| %-29%-28s | %-12s |%n",rs,"note1","");
+System.out.printf("|   %s%-18d | %-9d |%n",rs,note7,i7);
 System.out.println("+-------------------------------------+");
-System.out.printf("| %-29%-28s | %-12s |%n",rs,"note1","");
+System.out.printf("|   %s%-18d | %-9d |%n",rs,coin1,i8);
 System.out.println("+-------------------------------------+");
-System.out.printf("| %-29%-28s | %-12s |%n",rs,"note1","");
+System.out.printf("|   %s%-18d | %-9d |%n",rs,coin2,i9);
 System.out.println("+-------------------------------------+");
-System.out.printf("| %-29%-28s | %-12s |%n",rs,"note1","");
+System.out.printf("|   %s%-18d | %-9d |%n",rs,coin3,i10);
 System.out.println("+-------------------------------------+");
-System.out.printf("| %-29%-28s | %-12s |%n",rs,"note1","");
+System.out.printf("|   %-19s   | %-9d |%n","No of Notes",totalNotes);
 System.out.println("+-------------------------------------+");
-System.out.printf("| %-29%-28s | %-12s |%n",rs,"note1","");
+System.out.printf("|   %-19s   | %-9d |%n","No of Coins",totalCoins);
 System.out.println("+-------------------------------------+");
-System.out.printf("| %-29%-28s | %-12s |%n",rs,"note1","");
-System.out.println("+-------------------------------------+");
+System.out.println();
+System.out.println();
+System.out.println("----------------------------------------");
+System.out.println("      THANK YOU FOR SHOPPING WITH US         ");
+System.out.println("----------------------------------------");
+
   }
 }
