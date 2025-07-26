@@ -196,6 +196,8 @@ System.out.printf("|   %s%-18d | %-9d |%n",rs,coin2,i9);
 System.out.println("+-------------------------------------+");
 System.out.printf("|   %s%-18d | %-9d |%n",rs,coin3,i10);
 System.out.println("+-------------------------------------+");
+System.out.printf("|   %s%-18d | %-9d |%n",rs,coin4,i11);
+System.out.println("+-------------------------------------+");
 System.out.printf("|   %-19s   | %-9d |%n","No of Notes",totalNotes);
 System.out.println("+-------------------------------------+");
 System.out.printf("|   %-19s   | %-9d |%n","No of Coins",totalCoins);
